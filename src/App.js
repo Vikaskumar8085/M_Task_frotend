@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import Main from "./Pages/Main";
+import View from "./Pages/View";
+import Edit from "./Pages/Edit";
+import { useSelector } from "react-redux";
+import Loader from "./Pages/Loader";
 
 function App() {
+  const loader = useSelector((state) => state.curd.loader);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Toaster />
+      <BrowserRouter>
+        {loader && <Loader />}
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/view/:id" element={<View />} />
+          <Route path="/Edit/:id" element={<Edit />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

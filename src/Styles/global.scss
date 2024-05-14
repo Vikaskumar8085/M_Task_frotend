@@ -1,0 +1,113 @@
+@import "./main";
+@import "./view";
+@import "./Edit";
+
+* {
+    margin    : 0px;
+    padding   : 0px;
+    box-sizing: border-box;
+}
+
+// loader
+
+.loader_wrapper {
+    display         : block;
+    position        : absolute;
+    height          : 100vh;
+    width           : 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index         : 1;
+    overflow        : hidden;
+
+    .loader_box {
+        display        : flex;
+        justify-content: center;
+        height         : 100vh;
+        width          : 100%;
+        align-items    : center;
+
+    }
+}
+
+
+
+
+// loader
+
+.modal_wrapper {
+    position        : absolute;
+    height          : 100vh;
+    overflow        : hidden;
+    width           : 100%;
+    left            : 0;
+    top             : 0;
+    z-index         : 1111;
+    background-color: rgba(45, 44, 44, 0.1);
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+
+
+
+    .modal_box {
+        display: grid;
+        width: 555px;
+
+
+        place-items     : center;
+        border-radius   : 4px;
+        background-color: white;
+        padding         : 20px;
+        width           : 300px;
+
+        .icons {
+            text-align   : center;
+            font-size    : 3em;
+            color        : #b01212aa;
+            width        : 100px;
+            padding      : 20px;
+            height       : 100px;
+            border       : 1px solid #b01212aa;
+            border-radius: 50%;
+        }
+
+        h6 {
+            text-transform: capitalize;
+            text-align    : center;
+            font-family   : 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size     : 1em;
+            font-weight   : 200;
+
+        }
+
+        p {
+            text-transform: capitalize;
+            text-align    : center;
+            font-family   : 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size     : 1.2em;
+
+        }
+
+        .box_button {
+            display        : flex;
+            width          : 100%;
+            justify-content: space-evenly;
+
+            button {
+                padding       : 5px 20px;
+                border        : none;
+                font-size     : 1em;
+                font-family   : 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-transform: uppercase;
+                color         : white;
+
+
+            }
+        }
+
+    }
+
+
+
+
+}
